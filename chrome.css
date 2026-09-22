@@ -1,0 +1,272 @@
+/* NOTHING ZEN DOT — Nothing-inspired browser chrome
+ * Browser UI only. Web pages are intentionally untouched.
+ */
+
+:root {
+  --nothing-bg: #0a0a0a;
+  --nothing-bg-2: #101010;
+  --nothing-bg-3: #151515;
+  --nothing-panel: #0d0d0d;
+  --nothing-text: #f2f2f2;
+  --nothing-muted: #8a8a8a;
+  --nothing-border: #292929;
+  --nothing-red: #e51b23;
+  --nothing-red-soft: rgba(229, 27, 35, 0.16);
+  --nothing-dot: rgba(255,255,255,0.42);
+
+  --zen-colors-primary: var(--nothing-text) !important;
+  --zen-colors-secondary: var(--nothing-muted) !important;
+  --zen-colors-tertiary: var(--nothing-bg) !important;
+  --zen-primary-color: var(--nothing-red) !important;
+}
+
+/* ---------- Base browser chrome ---------- */
+
+#browser,
+#navigator-toolbox,
+.browser-toolbox,
+#main-window,
+#zen-appcontent-navbar-container,
+#zen-sidebar-web-panel {
+  background: var(--nothing-bg) !important;
+  color: var(--nothing-text) !important;
+}
+
+#navigator-toolbox,
+#nav-bar,
+#TabsToolbar,
+#PersonalToolbar {
+  border-color: var(--nothing-border) !important;
+  box-shadow: none !important;
+}
+
+#navigator-toolbox {
+  background:
+    radial-gradient(circle, var(--nothing-dot) 0.7px, transparent 0.8px) 0 0 / 9px 9px,
+    var(--nothing-bg) !important;
+}
+
+/* ---------- Dot-matrix typography ---------- */
+/* DotGothic16 is optional. If installed on Windows it is used automatically. */
+#navigator-toolbox,
+#sidebar-box,
+#zen-sidebar,
+#TabsToolbar,
+#urlbar,
+#urlbar-container,
+#identity-box,
+#PanelUI-popup,
+menupopup,
+panel,
+toolbarbutton,
+.tab-text,
+.urlbar-input,
+#statuspanel {
+  font-family: "DotGothic16", "Segoe UI", sans-serif !important;
+  letter-spacing: 0.01em !important;
+}
+
+/* Keep browser icons on their normal icon font. */
+toolbarbutton .toolbarbutton-icon,
+.tab-icon-image,
+.urlbar-icon,
+.identity-icon,
+#star-button-box {
+  font-family: inherit !important;
+}
+
+/* ---------- Sidebar / tabs ---------- */
+
+#zen-sidebar {
+  background: var(--nothing-bg) !important;
+  border-right: 1px solid var(--nothing-border) !important;
+}
+
+#tabbrowser-tabs {
+  background: transparent !important;
+}
+
+.tabbrowser-tab {
+  --tab-selected-bg: var(--nothing-bg-3) !important;
+  --tab-hover-background-color: #171717 !important;
+  min-height: 34px !important;
+  border-radius: 0 !important;
+  margin: 2px 5px !important;
+}
+
+.tabbrowser-tab:hover {
+  background: #171717 !important;
+}
+
+.tabbrowser-tab[selected="true"] {
+  background: var(--nothing-bg-3) !important;
+  box-shadow: inset 2px 0 0 var(--nothing-red) !important;
+}
+
+.tabbrowser-tab[selected="true"] .tab-text {
+  color: var(--nothing-text) !important;
+}
+
+.tab-text {
+  color: #bcbcbc !important;
+  font-size: 12px !important;
+}
+
+.tabbrowser-tab[selected="true"] .tab-text::after {
+  content: " •" !important;
+  color: var(--nothing-red) !important;
+}
+
+/* ---------- URL bar ---------- */
+
+#urlbar-background,
+#searchbar {
+  background: var(--nothing-bg-2) !important;
+  border: 1px solid var(--nothing-border) !important;
+  border-radius: 2px !important;
+  box-shadow: none !important;
+}
+
+#urlbar[focused="true"] > #urlbar-background {
+  border-color: #4a4a4a !important;
+  box-shadow: 0 0 0 1px var(--nothing-red-soft) !important;
+}
+
+#urlbar-input {
+  color: var(--nothing-text) !important;
+  font-size: 12px !important;
+}
+
+#urlbar-input::selection {
+  background: var(--nothing-red) !important;
+  color: white !important;
+}
+
+/* ---------- Toolbar buttons ---------- */
+
+toolbarbutton {
+  border-radius: 2px !important;
+}
+
+toolbarbutton:hover {
+  background: #191919 !important;
+}
+
+toolbarbutton:active,
+toolbarbutton[open="true"] {
+  background: #202020 !important;
+}
+
+/* Tiny red state indicator without turning the UI red. */
+toolbarbutton[checked="true"] {
+  box-shadow: inset 0 -2px 0 var(--nothing-red) !important;
+}
+
+/* ---------- Menus / popups ---------- */
+
+menupopup,
+panel[type="arrow"],
+panel[type="autocomplete-richlistbox"] {
+  background: var(--nothing-panel) !important;
+  color: var(--nothing-text) !important;
+  border: 1px solid var(--nothing-border) !important;
+  border-radius: 2px !important;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.45) !important;
+}
+
+menuitem,
+menu {
+  color: var(--nothing-text) !important;
+  border-radius: 0 !important;
+}
+
+menuitem:hover,
+menu:hover {
+  background: #1b1b1b !important;
+}
+
+menuitem[_moz-menuactive="true"] {
+  background: #1b1b1b !important;
+  box-shadow: inset 2px 0 0 var(--nothing-red) !important;
+}
+
+/* ---------- Find bar / status ---------- */
+
+.findbar-container,
+.findbar {
+  background: var(--nothing-bg-2) !important;
+  border: 1px solid var(--nothing-border) !important;
+  box-shadow: none !important;
+}
+
+.findbar-textbox {
+  background: #080808 !important;
+  color: var(--nothing-text) !important;
+  border: 1px solid var(--nothing-border) !important;
+  border-radius: 1px !important;
+}
+
+/* ---------- Downloads / panels ---------- */
+
+.panel-subview-body,
+.panel-header,
+#downloadsListBox {
+  background: var(--nothing-panel) !important;
+  color: var(--nothing-text) !important;
+}
+
+.downloadButton:hover,
+.subviewbutton:hover {
+  background: #1a1a1a !important;
+  box-shadow: inset 2px 0 0 var(--nothing-red) !important;
+}
+
+/* ---------- Zen-specific compact geometry ---------- */
+
+#zen-workspaces-button,
+#zen-sidebar-top-buttons,
+#zen-sidebar-bottom-buttons {
+  background: transparent !important;
+}
+
+#zen-workspaces-button:hover,
+#zen-sidebar-top-buttons toolbarbutton:hover,
+#zen-sidebar-bottom-buttons toolbarbutton:hover {
+  background: #171717 !important;
+}
+
+/* ---------- Scrollbars in browser chrome ---------- */
+
+* {
+  scrollbar-color: #454545 transparent !important;
+  scrollbar-width: thin !important;
+}
+
+/* ---------- Minimal red accents ---------- */
+
+#downloads-button[attention="true"],
+#notification-popup-box[attention="true"],
+#nav-bar .toolbarbutton-1[attention="true"] {
+  fill: var(--nothing-red) !important;
+  color: var(--nothing-red) !important;
+}
+
+/* ---------- Reduce visual noise ---------- */
+
+#back-button,
+#forward-button,
+#reload-button,
+#stop-button,
+#home-button {
+  filter: none !important;
+}
+
+#navigator-toolbox > toolbar {
+  box-shadow: none !important;
+}
+
+#PersonalToolbar {
+  background: var(--nothing-bg) !important;
+}
+
+/* No page/content styling is included intentionally. */
