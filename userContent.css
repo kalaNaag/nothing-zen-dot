@@ -1,0 +1,101 @@
+/* NOTHING ZEN DOT v1.2.0 — browser-owned pages only.
+ * Ordinary websites are intentionally excluded.
+ */
+
+@-moz-document url-prefix("about:preferences") {
+  :root {
+    color-scheme: dark !important;
+    --nz-bg: #070707;
+    --nz-panel: #101010;
+    --nz-panel-2: #151515;
+    --nz-line: #292929;
+    --nz-white: #f4f4f4;
+    --nz-grey: #a8a8a8;
+    --nz-red: #e51b23;
+  }
+
+  html,
+  body,
+  #categories,
+  #mainPrefPane,
+  #preferences-stack {
+    background: var(--nz-bg) !important;
+    color: var(--nz-white) !important;
+  }
+
+  body::before {
+    content: "" !important;
+    position: fixed !important;
+    inset: 0 !important;
+    pointer-events: none !important;
+    background-image: radial-gradient(circle, rgba(255,255,255,.20) .55px, transparent .8px) !important;
+    background-size: 9px 9px !important;
+    opacity: .20 !important;
+  }
+
+  #categories {
+    border-right: 1px solid var(--nz-line) !important;
+  }
+
+  .category {
+    border-radius: 2px !important;
+    color: var(--nz-grey) !important;
+  }
+
+  .category:hover {
+    background: #151515 !important;
+    color: var(--nz-white) !important;
+  }
+
+  .category[selected="true"] {
+    background: #171717 !important;
+    color: var(--nz-white) !important;
+    box-shadow: inset 2px 0 0 var(--nz-red) !important;
+  }
+
+  #mainPrefPane,
+  .pane-container,
+  groupbox,
+  .subcategory,
+  .search-container {
+    background: transparent !important;
+    color: var(--nz-white) !important;
+    border-color: var(--nz-line) !important;
+  }
+
+  input,
+  textarea,
+  select,
+  menulist,
+  textbox,
+  search-textbox {
+    background: var(--nz-panel) !important;
+    color: var(--nz-white) !important;
+    border: 1px solid var(--nz-line) !important;
+    border-radius: 2px !important;
+    box-shadow: none !important;
+  }
+
+  button,
+  .button {
+    background: var(--nz-panel-2) !important;
+    color: var(--nz-white) !important;
+    border: 1px solid var(--nz-line) !important;
+    border-radius: 2px !important;
+    box-shadow: none !important;
+  }
+
+  button:hover,
+  .button:hover {
+    background: #1c1c1c !important;
+    border-color: #3a3a3a !important;
+  }
+}
+
+@-moz-document url-prefix("about:addons") {
+  html,
+  body {
+    background: #070707 !important;
+    color: #f4f4f4 !important;
+  }
+}
