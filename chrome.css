@@ -368,4 +368,111 @@ toolbarbutton[attention="true"] .toolbarbutton-icon {
 * {
   scrollbar-color: #404040 transparent !important;
   scrollbar-width: thin !important;
+}/* ============================================================
+   TYPOGRAPHY — DOT MATRIX THROUGHOUT THE BROWSER UI
+   ============================================================ */
+
+:root,
+#navigator-toolbox,
+#navigator-toolbox *,
+#TabsToolbar,
+#TabsToolbar *,
+#tabbrowser-tabs,
+#tabbrowser-tabs *,
+#zen-sidebar,
+#zen-sidebar *,
+#zen-workspaces-button,
+#zen-workspaces-button *,
+#zen-sidebar-top-buttons *,
+#zen-sidebar-bottom-buttons *,
+#zen-sidebar-foot-buttons *,
+#nav-bar,
+#nav-bar *,
+#urlbar,
+#urlbar *,
+.urlbarView,
+.urlbarView *,
+menupopup,
+menupopup *,
+menu,
+menu *,
+menuitem,
+menuitem *,
+panel,
+panel *,
+.panel-subview-body,
+.panel-subview-body *,
+.subviewbutton,
+.subviewbutton *,
+toolbarbutton,
+toolbarbutton *,
+.findbar,
+.findbar *,
+#appMenu-mainView,
+#appMenu-mainView * {
+  font-family: "DotGothic16", "Doto", "Segoe UI", sans-serif !important;
+  font-synthesis: none !important;
+  letter-spacing: .005em !important;
 }
+
+/* XUL menu text nodes have their own classes; target them explicitly. */
+.menu-text,
+.menu-iconic-text,
+.menu-iconic-label,
+.menu-accel,
+.menu-accel-container,
+.menu-iconic-tooltip,
+.subviewbutton > .toolbarbutton-text,
+toolbarbutton > .toolbarbutton-text,
+toolbarbutton > .toolbarbutton-text > label,
+toolbarbutton > label,
+.tab-label,
+.tab-text,
+.urlbar-input {
+  font-family: "DotGothic16", "Doto", "Segoe UI", sans-serif !important;
+  font-synthesis: none !important;
+}
+
+/* Menu rows: keep the dot-matrix face but don't enlarge the controls. */
+menupopup menu,
+menupopup menuitem,
+panel .subviewbutton,
+#appMenu-mainView .subviewbutton,
+#downloadsPanel .subviewbutton {
+  font-size: 12px !important;
+  line-height: 1.25 !important;
+}
+
+/* Context menus and browser action menus. */
+#contentAreaContextMenu,
+#toolbar-context-menu,
+#placesContext,
+#unified-extensions-context-menu,
+#appMenu-popup,
+#downloadsPanel,
+#widget-overflow {
+  font-family: "DotGothic16", "Doto", "Segoe UI", sans-serif !important;
+}
+
+#contentAreaContextMenu *,
+#toolbar-context-menu *,
+#placesContext *,
+#unified-extensions-context-menu *,
+#appMenu-popup *,
+#downloadsPanel *,
+#widget-overflow * {
+  font-family: "DotGothic16", "Doto", "Segoe UI", sans-serif !important;
+}
+
+/* Keep SVG/image/icon rendering intact. */
+.toolbarbutton-icon,
+.tab-icon-image,
+.urlbar-icon,
+.identity-icon,
+button .button-icon,
+image,
+svg {
+  font-family: initial !important;
+}
+
+
