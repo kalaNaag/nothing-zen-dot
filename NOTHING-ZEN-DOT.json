@@ -1,0 +1,16 @@
+{
+  "id": "7c5d8d88-6e1e-4b1c-9a6b-1e2f5d7c4a90",
+  "name": "NOTHING ZEN DOT",
+  "description": "A Nothing-inspired dot-matrix black and white Zen Browser UI with sparse red accents and technical geometry.",
+  "homepage": "https://github.com/kalaNaag/nothing-zen-dot",
+  "style": "https://raw.githubusercontent.com/kalaNaag/nothing-zen-dot/main/chrome.css",
+  "readme": "https://raw.githubusercontent.com/kalaNaag/nothing-zen-dot/main/readme.md",
+  "author": "kalaNaag",
+  "version": "1.0.0",
+  "tags": [
+    "minimal",
+    "nothing",
+    "dot-matrix",
+    "dark"
+  ]
+}
