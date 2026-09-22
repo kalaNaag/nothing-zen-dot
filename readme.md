@@ -1,37 +1,21 @@
 # NOTHING ZEN DOT
 
-A Nothing-inspired Zen Browser UI theme built around:
+Nothing-inspired Zen Browser visual system.
 
-- near-black browser chrome
-- white/off-white typography
-- sparse Nothing-red accents
-- thin technical borders
-- compact rectangular controls
-- subtle dot-matrix texture
-- optional DotGothic16 typography
-- no styling applied to website content
+The visual direction follows Nothing's documented design cues: monochrome treatment, restrained typography, engineering-led geometry, and micrographic/Glyph-inspired detail. It is an independent fan-made theme, not an official Nothing product.
 
-## Design direction
+## Files
 
-This is inspired by the visual language of Nothing products, not an official Nothing product or theme.
+- chrome.css — Zen browser chrome
+- userContent.css — browser-owned about: pages
+- install_nothing_zen_dot.ps1 — Windows installer
 
-The goal is a restrained technical interface rather than a retro terminal aesthetic.
+Ordinary websites are intentionally not targeted.
 
-## Font
+## Typography
 
-The theme automatically uses `DotGothic16` when it is installed on the system and falls back to Segoe UI when it is not.
+DotGothic16 is used when installed, with Segoe UI as fallback. This is a dot-matrix-inspired substitute and is not an official Nothing font.
 
-## Installation
+## Update
 
-In Zen:
-
-1. Open Settings.
-2. Open Zen Mods.
-3. Select **Import mods**.
-4. Select the exported mod JSON supplied with this repository.
-5. Enable **NOTHING ZEN DOT**.
-6. Restart Zen if the UI does not refresh immediately.
-
-## Notes
-
-This mod targets Zen's browser chrome. It does not intentionally modify the contents of normal websites.
+Close Zen and run install_nothing_zen_dot.bat again. The installer backs up the current zen-themes.json before updating the local theme.
